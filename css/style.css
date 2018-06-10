@@ -1,0 +1,204 @@
+/* простейшие стили, которые все таскают из проекта в проект.
+
+*, *:before, *:after { 
+	box-sizing: border-box; 
+}
+
+body { 
+	background-color: #f5f5f5; 
+	color: #333; 
+	font-size: 14px; 
+	font-family: Verdana, Arial, sans-serif; 
+	line-height: 20px; 
+	}
+
+a { 
+	text-decoration: none; 
+	transition: all 0.3s linear 0s; 
+}
+
+ul, ol {
+	list-style-type:none;
+}
+
+*/
+
+
+/* добавили шрифты на страницу локально*/
+@font-face{
+	font-family: 'Roboto', sans-serif;
+	src:url(../fonts/Roboto/Roboto-Light.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Varela Round', sans-serif;
+	src:url(../fonts/Varela_Round/VarelaRound-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1rem;
+	line-height: 1.3;
+	background: rgb(73, 206, 164);
+    background: linear-gradient(350deg, rgb(73, 206, 164) 0%, rgb(153, 216, 241) 92%);
+}
+
+
+ul, ol{
+	list-style-type:none;
+}
+
+a { 
+	text-decoration: none; 
+	transition: all 0.3s linear 0s; 
+}
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.5;
+	letter-spacing: 1.4px;
+}
+
+.container{
+	margin-right: auto;/*Центрируем*/
+  	margin-left: auto;/*Центрируем*/
+	padding-right: 10%;
+	padding-left: 10%;
+	max-width: 1440px;
+	box-shadow:2px 6px 11px rgba(19, 127, 116, 0.22);
+	-webkit-box-shadow:2px 6px 11px rgba(19, 127, 116, 0.22);
+}
+
+.main{
+	margin-right:2%;/*Центрируем*/
+  	margin-left:2%;/*Центрируем*/
+	box-shadow:2px 6px 11px rgba(19, 127, 116, 0.22);
+	-webkit-box-shadow:2px 6px 11px rgba(19, 127, 116, 0.22);
+
+}
+
+					/*  MENU №1 START */
+
+
+.menu__list{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+		
+}
+
+.menu__item{
+	font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+	color:blue;
+	
+}
+
+				/*  MENU toggle-1v (ОБЫЧНАЯ) START */
+
+/*1 шаг. создадим родителя (будущую обертку-кнопку) */
+.menu-btn-1 {
+  	display: block;
+  	width: 50px;
+  	height: 50px;
+  	background-color: #BCC0C8;
+  	border-radius: 50%;
+  	position: relative;
+  
+}
+
+/*2 шаг. создадим еще 2 чертчоки помимо самой span-черточки.
+на данный момент 3 чертчоки слиты в одну*/
+.menu-btn-1 span::before,
+.menu-btn-1 span::after {
+  	content: '';
+  	display: block;
+  	transition: 0.4s;
+}
+
+
+/*3 шаг. создадим 3 черточки и зададим одинаковые свойства.
+на данный момент 3 чертчоки слиты в одну*/
+.menu-btn-1 span,
+.menu-btn-1 span::before,
+.menu-btn-1 span::after {
+  	width: 20px;/*ширина черточек*/
+  	height: 2px;/*высота черточек*/
+  	background-color: #222;
+  
+  	position: absolute;
+  	top: 50%; /*отцентрируем по вертикале*/
+  	left: 50%;/*отцентрируем по горизонтале*/
+  	margin-top: -1px;/*отцентрируем по вертикале на половину от height*/
+  	margin-left: -10px;/*отцентрируем по горизонтале на половину от width*/
+  
+}
+
+/*4 шаг. разъеденим наши черточки-поднимем вверх (.menu-btn-1 span::before) 
+ и поднимем вниз (.menu-btn-1 span::after) */
+
+ .menu-btn-1 span::before{
+ 	-webkit-transform:translateY(-5px);/*подняли вверх по оси Y*/
+ 	transform: translateY(-5px);/*подняли вверх по оси Y*/
+ 
+ }
+
+ .menu-btn-1 span::after{
+     -webkit-transform:translateY(5px);/*опустили вниз по оси Y*/
+ 	 transform: translateY(5px);/*опустили вниз по оси Y*/
+ 
+ }
+
+			/*  MENU toggle-2v (КРЕСТИК) START */
+
+/* 1. При клике сделаем трансофрмацию для верхней палочки:) */
+
+/*.menu-btn_active span:before{
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+
+}*/
+
+/* 2. При клике сделаем трансофрмацию для нижней палочки:) */
+/*.menu-btn_active span:after{
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}*/
+
+/*3. скроем сам класс span (чертчока по середине)*/
+/*.menu-btn_active span{
+	height: 0;
+}*/
+
+
+			/*  MENU toggle-3v (СТРЕЛКА) START */
+
+
+.menu-btn_active span:before{
+	-webkit-transform: rotate(-35deg);
+	        transform: rotate(-35deg);
+/*меняем положение откуда будет меняться трансформация
+по умолчанию из центра идет трансформация, а мы сделаем слева снизу*/       
+	-webkit-transform-origin:left bottom;
+	        transform-origin:left bottom;
+
+	 width: 10px; 
+}
+
+.menu-btn_active span:after{
+	-webkit-transform: rotate(35deg);
+	        transform: rotate(35deg);
+/*меняем положение откуда будет меняться трансформация
+по умолчанию из центра идет трансформация, а мы сделаем слева сверху*/
+
+	-webkit-transform-origin:left top;
+	        transform-origin:left top;
+
+	width: 10px;  
+}

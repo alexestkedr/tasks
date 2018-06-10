@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+          <title>Portfolio Landing</title>
+          <meta name="author" content="Aleksandr Papiev">
+          <meta name="description" content="Мой первый сайт как разработчика">
+          <meta name="keywords" content="portfolio">
+
+          <!-- чтобы старые версии IE отображали страницу по новым стандртам -->
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <!-- чтобы моб.Браузеры не масштабировали контент -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          
+          <link rel="shortcut icon" href="images/icons/favicon-16x16.png" type="image/x-icon">
+          <link rel="stylesheet" href="libs/font-awesome/css/fontawesome-all.min.css">
+          <link rel="stylesheet" href="css/normalize.css">
+          <link rel="stylesheet" href="css/style.css">
+      </head>
+
+<body>
+   <header id="header">
+      <div class="container">
+   	      <h1 class="header__article">Different tasks</h1>
+
+                        <!--   MENU №1 START -->
+
+   	      <nav class="menu">
+   		        <ul class="menu__list">
+
+   			         <li class="menu__item">
+   				           <a href="#" class="menu__link">About</a>
+   			         </li>
+
+   			         <li class="menu__item">
+   				           <a href="#" class="menu__link">Company</a>
+   			         </li>
+
+   			         <li class="menu__item">
+   				           <a href="#" class="menu__link">Product</a>
+   			         </li>
+
+   			         <li class="menu__item">
+   				           <a href="#" class="menu__link">Transport</a>
+   			         </li>
+
+   			         <li class="menu__item">
+   				           <a href="#" class="menu__link">Contacts</a>
+   			         </li>
+
+   		       </ul>
+   	    </nav> <!-- MENU №1 end -->
+
+
+                <!--   MENU TOGGLE-1v START -->
+
+    <div class="menu__toggle-1">
+          <a href="#" class="menu-btn-1">
+              <span></span>
+          </a>
+    </div>
+
+
+              <!--   MENU TOGGLE-2v START -->
+          <!--  (При клике сделаем трансофрмацию:) -->
+
+
+
+
+
+
+      </div><!-- container end -->
+   </header> <!-- header end -->
+   <section class="main">
+
+  
+       
+
+                <!-- создание МЕНЮ как toggle old version -->
+
+
+<input class="input_toggle" type="checkbox" id="toggle">
+<label class="label_toggle" for="toggle">&#9776;</label>
+<nav class="nav_toggle">
+    <ul class="ul_toggle">
+       
+        <li class="li_toggle"><a class="a_toggle" href="#">Главная</a></li>
+        <li class="li_toggle"><a class="a_toggle" href="#">О нас</a></li>
+        <li class="li_toggle"><a class="a_toggle"  href="#">Услуги</a></li>
+        <li class="li_toggle"><a class="a_toggle"  href="#">Контакты</a></li>   
+    </ul>
+</nav> 
+
+                  <!-- создание ТАБЛИЦЫ -->
+
+
+<table class="table_one">
+  <thead>
+     <tr>
+       <th>IDEmpl</th>
+       <th>FirstName</th>
+       <th>LastName</th>
+       <th>City</th>
+       <th>Salary</th>
+     </tr>
+ </thead>
+   <tbody>   
+    <tr>
+       <td>01</td>
+       <td>lorem</td> 
+       <td>lorem</td>
+       <td>lorem</td>
+       <td>1500</td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>2000</td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>1900</td>
+    </tr>
+    <tr>
+        <td>04</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>800</td>
+    </tr>
+   <tbody>
+</table>
+
+<hr>
+ 
+  <h2>POSITIONING FLOAT ELEMENTS-1</h2>
+  
+   <!--  POSITION FLOAT ELEMENTS-1  -->
+   
+<header class="header-1">
+  <code>&#60;header&#62;</code>
+</header>
+
+<section class="section-1">
+  <code>&#60;section&#62; <br> float: left;</code>
+</section>
+
+<aside class="aside-1">
+  <code>&#60;aside&#62; <br> float: right;</code>
+</aside>
+
+<footer class="footer-1">
+  <code>&#60;footer&#62;</code>
+</footer>
+
+<hr>
+
+<h2>POSITIONING FLOAT ELEMENTS-2</h2>
+<!--  POSITION FLOAT ELEMENTS-2  -->
+
+    <header class="header-2">
+    <span>&#60;header&#62;</span>
+    </header>
+    <section class="section-2">
+<span>&#60;section&#62; <br> float: left;</span>
+    </section>
+    <section class="section-2">
+<span>&#60;section&#62; <br> float: left;</span>
+    </section>
+    <section class="section-2">
+<span>&#60;section&#62; <br> float: left;</span>
+    </section>
+    <footer class="footer-2">
+<span>&#60;footer&#62;</span>
+    </footer>
+    <hr>
+
+
+<!--
+       1-ый вар: Removing Spaces Between Inline-Block Elements 
+       
+    <header>...</header>
+<section>
+  ...
+</section><section>
+  ...
+</section><section>
+  ...
+</section>
+    <footer>...</footer>
+    -->
+    
+<!--    2-ой вар: Removing Spaces Between Inline-Block Elements-->
+    
+    <h2> Ниже описан второй способ Removing Spaces Between Inline-Block Elements</h2>
+    
+<header>...</header>
+<section>
+  ...
+</section><!--
+--><section>
+  ...
+</section><!--
+--><section>
+  ...
+ </section>
+ <footer>...</footer>
+
+
+                     <!--    FORM START -->
+
+
+ <form action="#">
+   <fieldset>
+    <legend>Карточка клиента</legend>
+
+     <label for="#"> Введи имя</label>
+     <input type="text" placeholder="Введите ваше имя" required minlength="2" maxlength="15" autocomplete="on"> 
+
+     <br><br>
+
+     <label for="#">Ваш пол:</label><br>     
+     <input type="radio" name="gender"> Мужчина<br>
+     <input type="radio" name="gender"> Женщина 
+
+     <br><br>
+
+     <label for="#">Ваш возраст:</label><br>
+        <select name="" id="">
+     	   <option value="#">0-20</option>
+     	   <option value="#">20-50</option>
+     	   <option value="#">50-100</option>
+        </select> 
+
+     <br><br>
+
+
+     <label for="#"> Введи телефон:</label>
+     <input type="tel" placeholder="Введите ваш телефон"> <br>
+
+     <label for="#"> Введи E-mail:</label>
+     <input type="email" placeholder="Введите ваш E-mail" required> <br>
+
+     <label for="#"> Ваше любимое блюдо:</label><br>
+
+<!--  Лучше опрос делать с checkbox-ами, тк не нужно ставить флажок в сам маленький маркер, достаточно просто нажать на само слово -->
+
+     <label for="potatoes"> Potatoes</label>
+     <input type="checkbox" id="potatoes" required name="food">
+
+     <label for="cabbage">Cabbage</label>
+     <input type="checkbox" id="cabbage" required name="food">
+
+     <label for="carrot">Carrot</label>
+     <input type="checkbox" id="carrot" required name="food"> <br>
+
+     <label for="#">Дата вашего рождения</label>
+     <input type="date"><br>
+
+     <input type="file" multiple><br><br>
+
+     <select size="2">
+      
+       <option value="">Tallinn</option>
+       <option value="">Vilnius</option>
+       <option value="">Riga</option>
+
+     </select><br><br>
+
+     <textarea name="" id="" cols="35" rows="5"></textarea><br><br>
+
+     <input type="reset" value="Очистить">
+
+     <input type="submit" value="Послать">
+
+     <button type="submit">Послать дважды</button>
+
+  </fieldset>
+</form>
+
+
+ <!-- experement TASK -->
+
+     <div class="container-task">
+	
+	   <div class="head">width: 100%</div>
+	   <div class="menu-left">width: 35%</div>
+	   <div class="content">width: 65%</div>
+	   <div class="clearfix"></div>
+	   <div class="foot">width: 100%</div>
+
+    </div>
+
+  </section>
+
+     
+     <footer id="main-footer">
+     	
+     		<p>&copy;2018 Alex Papiev</p>
+  	
+    </footer><!-- end FOOTER -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+  
+  </body>
+</html>
